@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FBI System - Authorized</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+</head>
+<body>
+  <h1>&#128374; FBI System - Authorized &#128374;</h1>
+  <div class="card bg-dark text-center">
+    <div class="card-body">
+      <h5 class="card-title text-center">Bienvenido, <span id="email"></span>!</h5>
+      <a href="/restricted" class="btn bg-light">Ir a ruta restringida</a>
+      <script>
+        const email = document.cookie.match(/token=([^;]*)/)[1].split(':')[0];
+        document.getElementById('email').textContent = email;
+      </script>
+    </div>
+  </div>
+</body>
+</html>
